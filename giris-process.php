@@ -13,8 +13,14 @@ $sifre = $_POST['password'] ?? '';
 
 // Kontrol
 if ($kullanici === $dogru_kullanici && $sifre === $dogru_sifre) {
-    echo "<h2 style='text-align:center; margin-top:50px;'>Hoşgeldiniz, $sifre </h2>";
-    //buraya index.html'e geri dönme yolu ekle
+    echo "<h2 style='text-align:center; margin-top:50px;'>Hoşgeldiniz, $kullanici</h2>";
+
+    // 5 saniye sonra ana menüye yönlendirir
+    echo "<script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 5000);
+    </script>";
 } else {
     header("Location: giris.html");
     exit();
