@@ -4,15 +4,15 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Sabit kullanıcı bilgisi (örnek)
-$dogru_kullanici = "b241210030@sakarya.edu.tr";
-$dogru_sifre = "b241210030";
+//$dogru_kullanici = "b241210030@sakarya.edu.tr";
+//$dogru_sifre = "b241210030";
 
 // Formdan gelen verileri al
-$kullanici = $_POST['email'] ?? '';
-$sifre = $_POST['password'] ?? '';
+$kullanici = $_POST['userName'];
+$sifre = $_POST['password'];
 
 // Kontrol
-if ($kullanici === $dogru_kullanici && $sifre === $dogru_sifre) {
+if ($kullanici == $sifre) {
     echo "<h2 style='text-align:center; margin-top:50px;'>Hoşgeldiniz, $kullanici</h2>";
 
     // 5 saniye sonra ana menüye yönlendirir
@@ -26,3 +26,4 @@ if ($kullanici === $dogru_kullanici && $sifre === $dogru_sifre) {
     exit();
 }
 ?>
+
