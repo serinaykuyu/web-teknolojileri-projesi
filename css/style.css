@@ -101,13 +101,3 @@ body{
 section {
   margin-bottom: 30px;
 }
-
-.footer-color {
-  background-color: darkmagenta !important; /* Arka plan rengi */
-}
-
-.footer {
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
